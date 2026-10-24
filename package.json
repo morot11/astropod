@@ -5,9 +5,17 @@
   "author": "Manuel Ernesto Garcia",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@8.15.9",
+  "pnpm": {
+    "overrides": {
+      "@astrojs/sitemap>sitemap": "7.1.1"
+    },
+    "onlyBuiltDependencies": ["sharp"]
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "prebuild": "pnpm rebuild sharp",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
