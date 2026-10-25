@@ -67,11 +67,27 @@ export async function get(context) {
   };
 
   podcast.rss.channel[0].category = astropodConfig.category.map((category) => category);
-  podcast.rss.channel[0]["itunes:category"] = astropodConfig.category.map((category) => ({
-    $: {
-      text: category,
-    },
-  }));
+
+  // Conditional structure to insert subcategory:
+  if (astropodConfig.category && astropodConfig.category.length >= 2) {
+    podcast.rss.channel[0]["itunes:category"] = [
+      {
+        $: { text: astropodConfig.category[0] },
+        "itunes:category": [
+          {
+            $: { text: astropodConfig.category[1] }
+          }
+        ]
+      }
+    ];
+  } else {
+    // Fallback for single flat categories
+    podcast.rss.channel[0]["itunes:category"] = astropodConfig.category.map((category) => ({
+      $: {
+        text: category,
+      },
+    }));
+  }
 
   // podcast.rss.channel[0]["itunes:category"] = {
   //   $: {
