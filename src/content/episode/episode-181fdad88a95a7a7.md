@@ -1,15 +1,15 @@
 ---
-title: "Athlete’s Release (mf, athlete, bootycall, anal)"
-guid: "7560ace7-1748-44ce-bc9f-5d556770759c"
-guidIsPermaLink: false
-audioUrl: "https://audio.wedx.stream/stories/episode-181fdad88a95a7a7.mp3"
-pubDate: "2026-06-06T05:11:00.000Z"
-duration: "00:08:31"
 size: 12.273658
+guid: 7560ace7-1748-44ce-bc9f-5d556770759c
 sizeBytes: 12273658
-cover: "/episodes/episode-181fdad88a95a7a7.jpg"
-explicit: false
-episodeType: "full"
+title: Athlete’s Release (mf, athlete, bootycall, anal)
+audioUrl: https://audio.wedx.stream/stories/episode-181fdad88a95a7a7.mp3
+pubDate: 2026-06-06T05:11:00.000Z
+duration: 00:08:31
+cover: /episodes/episode-181fdad88a95a7a7.jpg
+explicit: true
+episodeType: full
+guidIsPermaLink: false
 episode: 8
 ---
 
