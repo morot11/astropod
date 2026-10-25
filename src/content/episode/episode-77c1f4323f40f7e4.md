@@ -1,15 +1,15 @@
 ---
-title: "Mission Distraction (mf, sting-mission, anal)"
-guid: "f2586b92-09ea-4bf6-a88e-be87c50ba715"
-guidIsPermaLink: false
-audioUrl: "https://audio.wedx.stream/stories/episode-77c1f4323f40f7e4.mp3"
-pubDate: "2026-06-02T06:38:00.000Z"
-duration: "00:09:42"
 size: 13.988333
+guid: f2586b92-09ea-4bf6-a88e-be87c50ba715
 sizeBytes: 13988333
-cover: "/episodes/episode-77c1f4323f40f7e4.jpg"
-explicit: false
-episodeType: "full"
+title: Mission Distraction (mf, sting-mission, anal)
+audioUrl: https://audio.wedx.stream/stories/episode-77c1f4323f40f7e4.mp3
+pubDate: 2026-06-02T06:38:00.000Z
+duration: 00:09:42
+cover: /episodes/episode-77c1f4323f40f7e4.jpg
+explicit: true
+episodeType: full
+guidIsPermaLink: false
 episode: 7
 ---
 
