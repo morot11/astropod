@@ -8,7 +8,7 @@ if (astropodConfig.feedSize) episode = episode.slice(0, astropodConfig.feedSize)
 
 import { marked } from "marked";
 
-const lastBuildDate = dayjs().format("ddd, DD MMM YYYY hh:mm:ss ZZ");
+const lastBuildDate = dayjs().format("ddd, DD MMM YYYY HH:mm:ss ZZ");
 const cover = isFullUrl(astropodConfig.cover) ? astropodConfig.cover : astropodConfig.link + astropodConfig.cover;
 
 export async function get(context) {
@@ -93,9 +93,11 @@ export async function get(context) {
     let item = {
       title: episode.data.title,
       description: marked.parse(episode.body),
-      pubDate: dayjs(episode.data.pubDate).format("ddd, DD MMM YYYY hh:mm:ss ZZ"),
+      pubDate: dayjs(episode.data.pubDate).format("ddd, DD MMM YYYY HH:mm:ss ZZ"),
       link: `${astropodConfig.link}/episode/${episode.slug}/`,
-      guid: `${astropodConfig.link}/episode/${episode.slug}/`,
+      guid: episode.data.guid
+        ? { _: episode.data.guid, $: { isPermaLink: String(episode.data.guidIsPermaLink ?? false) } }
+        : `${astropodConfig.link}/episode/${episode.slug}/`,
       "itunes:episode": episode.data.episode,
       "itunes:season": episode.data.season,
       "itunes:episodeType": episode.data.episodeType,
@@ -103,7 +105,7 @@ export async function get(context) {
       enclosure: {
         $: {
           url: isFullUrl(episode.data.audioUrl) ? episode.data.audioUrl : astropodConfig.link + episode.data.audioUrl,
-          length: episode.data.size && episode.data.size * 1000000,
+          length: episode.data.sizeBytes ?? Math.round(episode.data.size * 1000000),
           type: "audio/mpeg",
         },
       },
