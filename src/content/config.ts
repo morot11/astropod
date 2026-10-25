@@ -2,6 +2,8 @@ import { z, defineCollection } from "astro:content";
 
 const episodeSchema = z.object({
     title: z.string(),
+    guid: z.string().optional(),
+    guidIsPermaLink: z.boolean().optional(),
     audioUrl: z.string(),
     pubDate: z.coerce.date().optional(),
     cover: z.string().optional(),
@@ -11,6 +13,7 @@ const episodeSchema = z.object({
     episodeType: z.string().optional(),
     duration: z.coerce.string(), //duration in format hh:mm:ss
     size: z.number(), // size in megabytes
+    sizeBytes: z.number().int().positive().optional(),
 });
 
 export type episodeSchema = z.infer<typeof episodeSchema>;
